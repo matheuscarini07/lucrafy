@@ -1,0 +1,627 @@
+/* A fonte do projeto fica junto dos arquivos da página para funcionar sem internet. */
+@font-face {
+  font-family: Poppins;
+  src: url("assets/poppins-regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("assets/poppins-medium.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("assets/poppins-semibold.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("assets/poppins-bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+/* Zera as margens padrão e deixa o tamanho dos elementos mais previsível. */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: Poppins, Arial, sans-serif;
+}
+img {
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1, h2, h3, p {
+  margin-top: 0;
+}
+.largura {
+  width: 92.5%;
+  max-width: 1184px;
+  margin: 0 auto;
+}
+
+/* O cabeçalho tem a mesma altura e os mesmos espaços do desenho desktop. */
+.cabecalho {
+  height: 64px;
+  background-color: var(--fundo);
+  box-shadow: 0 1px 4px #0000000a;
+}
+.cabecalho-conteudo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+.marca {
+  display: block;
+  width: 91px;
+}
+.marca img {
+  display: block;
+  width: 91px;
+  height: 37px;
+}
+.navegacao {
+  display: flex;
+  gap: 30px;
+  margin-left: 38px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.navegacao a:hover {
+  text-decoration: underline;
+}
+.acesso {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-left: auto;
+}
+.entrar {
+  color: var(--texto-claro);
+  font-size: 13px;
+  font-weight: 500;
+}
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--verde);
+}
+.botao-cabecalho {
+  height: 39px;
+  padding: 0 16px;
+  border-radius: 8px;
+  color: var(--branco);
+  font-size: 15px;
+  font-weight: 500;
+}
+.texto-mobile {
+  display: none;
+}
+.botao:hover {
+  background-color: var(--verde-hover);
+}
+
+/* A imagem é posicionada dentro da primeira seção; o texto permanece por cima dela. */
+.apresentacao {
+  position: relative;
+  height: 705px;
+  overflow: hidden;
+}
+.imagem-apresentacao {
+  position: absolute;
+  top: -62px;
+  left: 10%;
+  width: 1222px;
+  max-width: none;
+  height: 691px;
+  object-fit: cover;
+}
+.apresentacao-conteudo {
+  position: relative;
+  z-index: 1;
+  padding-top: 114px;
+}
+.apresentacao h1 {
+  margin-bottom: 25px;
+  font-size: 52px;
+  line-height: 1.15;
+  letter-spacing: -1.3px;
+  font-weight: 700;
+}
+.apresentacao h1 span {
+  color: var(--verde-titulo);
+}
+.apresentacao p {
+  width: 530px;
+  max-width: 100%;
+  margin-left: 6px;
+  margin-bottom: 28px;
+  color: var(--texto-claro);
+  font-size: 18px;
+  line-height: 1.63;
+  font-weight: 500;
+}
+.botao-principal {
+  width: 310px;
+  height: 53px;
+  margin-left: 11px;
+  border-radius: 27px;
+  color: var(--branco);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* A abertura dos benefícios é centralizada; os cartões ocupam três colunas iguais. */
+.beneficios {
+  min-height: 956px;
+  padding-top: 96px;
+}
+.introducao-beneficios {
+  max-width: 768px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+.etiqueta {
+  margin-bottom: 17px;
+  color: var(--verde-titulo);
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.introducao-beneficios h2 {
+  margin-bottom: 13px;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -0.8px;
+}
+.descricao-beneficios {
+  color: var(--texto-claro);
+  font-size: 15px;
+  line-height: 22.5px;
+}
+.cartoes {
+  display: flex;
+  justify-content: space-between;
+}
+.cartao {
+  width: 31.5%;
+  min-height: 524px;
+  padding: 65px 32px 30px;
+  border-radius: 16px;
+  background-color: var(--branco);
+  box-shadow: 0 4px 6px #00000012;
+}
+.imagem-cartao {
+  display: block;
+  width: 144px;
+  height: 144px;
+  margin: 0 auto 48px;
+}
+.cartao h3 {
+  min-height: 60px;
+  margin-bottom: 11px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.36px;
+  font-weight: 600;
+}
+.cartao p {
+  min-height: 98px;
+  margin-bottom: 8px;
+  color: var(--texto-claro);
+  font-size: 15px;
+  line-height: 24.38px;
+}
+.rodape-cartao {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 43px;
+  border-top: 1px solid var(--borda);
+  font-size: 13px;
+  font-weight: 500;
+}
+.rodape-cartao img {
+  width: 17px;
+  height: 17px;
+}
+
+/* Cada recurso usa duas colunas para manter a relação entre texto e ilustração. */
+.funcionalidade {
+  overflow: hidden;
+}
+.funcionalidade-branca {
+  height: 456px;
+  background-color: var(--branco);
+}
+.funcionalidade-cinza {
+  height: 474px;
+  background-color: var(--fundo);
+}
+.duas-colunas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.texto-funcionalidade {
+  width: 48%;
+}
+.etiqueta-com-icone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  letter-spacing: 0.55px;
+}
+.etiqueta-com-icone img {
+  width: 15px;
+  height: 15px;
+}
+.texto-funcionalidade h2 {
+  margin-bottom: 17px;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -0.8px;
+}
+.descricao-funcionalidade {
+  margin-bottom: 18px;
+  color: var(--texto-claro);
+  font-size: 15px;
+  line-height: 24.38px;
+}
+.vantagens {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.vantagens li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 22.5px;
+  font-weight: 500;
+}
+.vantagens img {
+  width: 20px;
+  height: 20px;
+}
+.imagem-entradas {
+  display: block;
+  width: 505px;
+  max-width: 100%;
+}
+
+/* Na segunda faixa, o recorte mostra só a metade da ilustração usada no Figma. */
+.resumo-colunas {
+  display: flex;
+}
+.recorte-resumo {
+  width: 480px;
+  height: 360px;
+  overflow: hidden;
+}
+.recorte-resumo img {
+  display: block;
+  width: 950px;
+  max-width: none;
+  height: 633px;
+  margin-top: -130px;
+  margin-left: -470px;
+}
+
+/* A chamada escura é um cartão dentro de uma faixa branca. */
+.chamada {
+  height: 652px;
+  padding-top: 120px;
+  background-color: var(--branco);
+}
+.caixa-chamada {
+  width: 82.5%;
+  max-width: 1056px;
+  height: 491px;
+  margin: 0 auto;
+  padding: 110px 64px;
+  border-radius: 24px;
+  background-color: var(--verde-escuro);
+  color: var(--fundo);
+}
+.caixa-chamada h2 {
+  margin-bottom: 22px;
+  font-size: 44px;
+  line-height: 55px;
+  letter-spacing: -1.1px;
+}
+.caixa-chamada p {
+  max-width: 760px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 24.38px;
+  font-weight: 500;
+}
+.botao-final {
+  height: 46px;
+  padding: 0 33px;
+  border-radius: 12px;
+  color: var(--verde-escuro);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* O rodapé mantém os textos pequenos e discretos, como no arquivo de origem. */
+.rodape {
+  height: 245px;
+  background-color: var(--branco);
+}
+.rodape-conteudo {
+  padding-top: 23px;
+}
+.logo-rodape {
+  display: block;
+  width: 91px;
+  height: 37px;
+}
+.descricao-rodape {
+  margin-top: 10px;
+  color: var(--texto-claro);
+  font-size: 15px;
+  line-height: 22.5px;
+}
+.rodape-base {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 38px;
+  color: var(--texto-claro);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.44px;
+}
+.rodape-base .direitos {
+  margin-bottom: 0;
+  font-size: 11px;
+}
+.textos-legais {
+  display: flex;
+  gap: 24px;
+}
+
+/* Em telas menores, os blocos passam a ficar um embaixo do outro. */
+@media (max-width: 900px) {
+  .largura {
+    width: 90%;
+    max-width: 700px;
+  }
+  .navegacao {
+    display: none;
+  }
+  .acesso {
+    gap: 16px;
+  }
+  .apresentacao {
+    height: 680px;
+  }
+  .imagem-apresentacao {
+    left: 22%;
+    top: 110px;
+    width: 950px;
+    height: auto;
+  }
+  .apresentacao-conteudo {
+    padding-top: 55px;
+  }
+  .apresentacao h1 {
+    font-size: 42px;
+  }
+  .apresentacao p {
+    width: 470px;
+    font-size: 15px;
+  }
+  .beneficios {
+    padding: 72px 0 90px;
+  }
+  .cartoes {
+    display: block;
+  }
+  .cartao {
+    width: 100%;
+    max-width: 500px;
+    min-height: auto;
+    margin: 0 auto 20px;
+    padding: 36px 32px 28px;
+  }
+  .imagem-cartao {
+    margin-bottom: 28px;
+  }
+  .cartao h3, .cartao p {
+    min-height: 0;
+  }
+  .funcionalidade-branca, .funcionalidade-cinza {
+    height: auto;
+    padding: 64px 0;
+  }
+  .duas-colunas {
+    display: block;
+  }
+  .texto-funcionalidade {
+    width: 100%;
+  }
+  .imagem-entradas {
+    width: 100%;
+    max-width: 505px;
+    margin: 30px auto 0;
+  }
+  .resumo-colunas {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .recorte-resumo {
+    margin: 30px auto 0;
+  }
+  .chamada {
+    height: auto;
+    padding: 64px 0;
+  }
+  .caixa-chamada {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    padding: 60px 40px;
+  }
+  .caixa-chamada h2 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  .rodape {
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .rodape-base {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/* No celular, o texto fica legível sem rolagem horizontal. */
+@media (max-width: 560px) {
+  body {
+    background-color: var(--fundo-mobile);
+  }
+  .cabecalho {
+    background-color: var(--branco);
+  }
+  .largura {
+    width: 92%;
+  }
+  .so-desktop {
+    display: none;
+  }
+  .texto-desktop {
+    display: none;
+  }
+  .texto-mobile {
+    display: inline;
+  }
+  .acesso {
+    gap: 18px;
+  }
+  .botao-cabecalho {
+    height: 30px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+  .entrar {
+    font-size: 13px;
+  }
+  .apresentacao {
+    height: 600px;
+  }
+  .imagem-apresentacao {
+    display: none;
+  }
+  .apresentacao-conteudo {
+    padding-top: 92px;
+  }
+  .apresentacao h1 {
+    font-size: 30px;
+    letter-spacing: -0.8px;
+  }
+  .apresentacao p {
+    margin-left: 0;
+    margin-bottom: 38px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .botao-principal {
+    width: 100%;
+    height: 78px;
+    margin-left: 0;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+  .introducao-beneficios h2, .texto-funcionalidade h2 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .introducao-beneficios .etiqueta, .texto-funcionalidade .etiqueta {
+    display: none;
+  }
+  .introducao-beneficios {
+    margin-bottom: 35px;
+  }
+  .descricao-beneficios, .descricao-funcionalidade {
+    font-size: 15px;
+  }
+  .cartao {
+    max-width: none;
+    padding: 36px 24px 28px;
+  }
+  .cartao h3 {
+    margin-top: 36px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .cartao p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .funcionalidade-cinza {
+    background-color: var(--fundo-mobile);
+  }
+  .vantagens li {
+    font-size: 13px;
+  }
+  .recorte-resumo {
+    width: 100%;
+    height: 250px;
+  }
+  .recorte-resumo img {
+    width: 650px;
+    height: 433px;
+    margin-top: -85px;
+    margin-left: -320px;
+  }
+  .caixa-chamada {
+    width: 92%;
+    padding: 42px 28px;
+  }
+  .caixa-chamada h2 {
+    font-size: 30px;
+  }
+  .caixa-chamada p {
+    font-size: 14px;
+  }
+  .botao-final {
+    width: 100%;
+  }
+  .descricao-rodape {
+    font-size: 13px;
+  }
+  .descricao-rodape br {
+    display: none;
+  }
+  .rodape-base .direitos {
+    line-height: 1.5;
+  }
+  .textos-legais {
+    display: block;
+  }
+  .textos-legais span {
+    display: block;
+    margin-top: 12px;
+  }
+}

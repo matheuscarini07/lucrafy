@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Configura a leitura correta do texto e adapta a página a telas menores. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lucrafy: controle suas finanças de forma simples e gratuita.">
+  <title>Lucrafy — Controle financeiro sem complicação</title>
+  <!-- Primeiro vêm as cores; depois, as regras de tamanho e posição. -->
+  <link rel="stylesheet" href="cores.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- O cabeçalho reúne a marca, os atalhos para as seções e o acesso à conta. -->
+  <div class="cabecalho">
+    <div class="largura cabecalho-conteudo">
+      <a class="marca" href="#inicio" aria-label="Lucrafy, voltar ao início">
+        <img src="assets/logo.png" alt="Lucrafy">
+      </a>
+      <div class="navegacao" aria-label="Navegação principal">
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#beneficios">Benefícios</a>
+      </div>
+      <div class="acesso">
+        <span class="entrar">Entrar</span>
+        <a class="botao botao-cabecalho" href="#conta"><span class="texto-desktop">Criar Conta Gratuita</span><span class="texto-mobile">Criar Conta</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="inicio">
+    <!-- A primeira seção apresenta a proposta da Lucrafy sobre a ilustração original. -->
+    <div class="apresentacao" aria-labelledby="titulo-principal">
+      <img class="imagem-apresentacao" src="assets/destaque.png" alt="Gráficos financeiros, calculadora e moedas">
+      <div class="largura apresentacao-conteudo">
+        <h1 id="titulo-principal">Veja para onde vai<br> cada centavo do seu<br> negócio,<br> <span>sem complicação.</span></h1>
+        <p>Chega de planilhas confusas e fórmulas difíceis. Saiba exatamente o que entra, o que sai e quanto sobra no final do mês com um clique.</p>
+        <a class="botao botao-principal" href="#conta">Começar agora</a>
+      </div>
+    </div>
+
+    <!-- Os três cartões resumem os benefícios antes de explicar as ferramentas. -->
+    <div class="beneficios" id="beneficios" aria-labelledby="titulo-beneficios">
+      <div class="largura">
+        <div class="introducao-beneficios">
+          <p class="etiqueta">Simples, rápido e direto</p>
+          <h2 id="titulo-beneficios">O jeito mais leve de enxergar suas finanças</h2>
+          <p class="descricao-beneficios">Sem relatórios intermináveis ou termos difíceis. Veja apenas o que realmente importa para tomar boas decisões no dia a dia.</p>
+        </div>
+
+        <div class="cartoes">
+          <div class="cartao">
+            <img class="imagem-cartao" src="assets/controle-gastos.png" alt="Gráficos de gastos organizados por categoria">
+            <h3>Controle seus gastos sem dor de cabeça</h3>
+            <p>Anote e veja onde você está gastando mais, tudo organizado por categoria e fácil de entender, sem fórmulas quebrando.</p>
+            <div class="rodape-cartao"><img src="assets/categoria.svg" alt="">Categorização limpa e visual</div>
+          </div>
+          <div class="cartao">
+            <img class="imagem-cartao" src="assets/quanto-sobra.png" alt="Moedas e gráfico do valor que sobra">
+            <h3>Saiba exatamente quanto sobra</h3>
+            <p>O cálculo do que você faturou menos o que gastou é feito na hora, sem segredo nem pegadinha contábil.</p>
+            <div class="rodape-cartao"><img src="assets/categoria.svg" alt="">Sobra real calculada na hora</div>
+          </div>
+          <div class="cartao">
+            <img class="imagem-cartao" src="assets/contas-mes.png" alt="Calculadora e contas do mês">
+            <h3>Preveja as contas do mês</h3>
+            <p>Acompanhe os vencimentos dos próximos dias para nunca tomar susto com dinheiro faltando na hora de pagar boletos.</p>
+            <div class="rodape-cartao"><img src="assets/categoria.svg" alt="">Alertas de vencimentos fáceis</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aqui o texto e a imagem ficam lado a lado para mostrar o registro diário. -->
+    <div class="funcionalidade funcionalidade-branca" id="funcionalidades" aria-labelledby="titulo-entradas">
+      <div class="largura duas-colunas">
+        <div class="texto-funcionalidade">
+          <p class="etiqueta etiqueta-com-icone"><img src="assets/pratico.svg" alt="">Prático e descomplicado</p>
+          <h2 id="titulo-entradas">Controle diário de entradas e saídas<span class="so-desktop"><br>sem dor de cabeça</span></h2>
+          <p class="descricao-funcionalidade">Sem precisar conectar banco ou configurar APIs complexas. Você digita ou carrega os gastos do seu dia a dia em segundos<span class="so-desktop"> e visualiza tudo de forma limpa e organizada</span>.</p>
+          <ul class="vantagens">
+            <li><img src="assets/marcador.svg" alt="">Lançamento rápido de despesas e vendas do dia</li>
+            <li><img src="assets/marcador.svg" alt="">Organização automática por categorias amigáveis</li>
+            <li><img src="assets/marcador.svg" alt="">Visão clara de quanto você tem disponível agora</li>
+          </ul>
+        </div>
+        <img class="imagem-entradas" src="assets/entradas-saidas.png" alt="Calculadora, gráficos e moedas">
+      </div>
+    </div>
+
+    <!-- O segundo recurso mostra o resumo mensal com a outra ilustração do Figma. -->
+    <div class="funcionalidade funcionalidade-cinza" aria-labelledby="titulo-resumo">
+      <div class="largura duas-colunas resumo-colunas">
+        <div class="recorte-resumo"><img src="assets/resumo-mensal.png" alt="Resumo financeiro, gráfico de crescimento e moedas"></div>
+        <div class="texto-funcionalidade">
+          <p class="etiqueta etiqueta-com-icone"><img src="assets/visao-transparente.svg" alt="">Visão transparente</p>
+          <h2 id="titulo-resumo">Resumo simples do mês pronto para você entender</h2>
+          <p class="descricao-funcionalidade">Sem termos técnicos de contabilidade que ninguém entende. Apenas o que interessa: quanto entrou, quanto saiu e o dinheiro limpo que ficou no bolso.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- A chamada final retoma a ação principal da página. -->
+    <div class="chamada" id="conta" aria-labelledby="titulo-chamada">
+      <div class="caixa-chamada">
+        <h2 id="titulo-chamada">Pronto para assumir o controle<br> total do seu lucro?</h2>
+        <p>Junte-se a centenas de empresas que trocaram o caos das planilhas pela governança cirúrgica da Lucrafy.<span class="so-desktop"> Crie seu ambiente em menos de 5 minutos.</span></p>
+        <span class="botao botao-final">Criar conta grátis</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- O rodapé encerra a página com a descrição da marca e os textos legais. -->
+  <div class="rodape">
+    <div class="largura rodape-conteudo">
+      <div>
+        <img class="logo-rodape" src="assets/logo.png" alt="Lucrafy">
+        <p class="descricao-rodape">O gerenciador financeiro simples, prático e 100%<br>gratuito para quem quer controlar gastos sem<br>burocracia nem complicação.</p>
+      </div>
+      <div class="rodape-base">
+        <p class="direitos">© 2026 Lucrafy. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+        <div class="textos-legais" aria-label="Textos legais">
+          <span>Termos de Uso</span>
+          <span>Privacidade</span>
+          <span>Políticas de Segurança</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
